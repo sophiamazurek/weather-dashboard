@@ -82,20 +82,44 @@ function fiveday(city){
         method: "GET"
       }).then(function(obj) {
           for(var i=0;i<5;i++){
-            console.log(obj.list[i*8].main.temp) 
+            console.log(obj.list[i*8].main.temp.humidity)
+            console.log(obj.list[i*8].main.wind.speed) 
 
           }
      
-   
-    })
+//dynamically build out the fiveday html
+{/* 
+            <div class="card">
+              <div class="card-body">
+                <h2>5 Day Forecast</h2>
+                <h2>Date</h2>
+                <p>icon</p>
+                <p>temperature</p>
+                <p>humidity</p>
+              </div>
+            </div>
+          </div>
+
+} */
+var div11=$("<div>");
+var div12=$("<div>");
+var h22=$("<h2>");
+var h23=$("<h2>");
+var p5=$("<p>");
+var p6=$("<p>");
+var p7=$("<p>");
+
+
+
 }
+
 
 //working moving app
 function renderBtn(){
     //run a forloop dynamically append each btn from localstraoge
 }
 oneday("reno");
-// fiveday("reno")
+fiveday("reno")
 //1. oneday fx
 //2. 5day fx
 //3.create the input ..when user click on btn
