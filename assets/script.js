@@ -196,8 +196,8 @@ function renderButtons() {
   }
  
    
-oneday("reno");
-fiveday("reno");
+oneday("");
+fiveday("");
 renderButtons();
 //1. oneday fx
 //2. 5day fx
