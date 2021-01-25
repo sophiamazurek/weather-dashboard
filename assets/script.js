@@ -1,6 +1,6 @@
 var APIKey="eba38d5202ab062097c0e84b133dc98e";
 //moment js
-var cityArray=["Austin"];
+var cityArray=[""];
 //get data from localstorage and store it into cityArray
 
 
@@ -176,8 +176,8 @@ function renderButtons() {
       // Then dynamicaly generating buttons for each movie in the array
       // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
       var a = $("<button>");
-      // Adding a class of movie-btn to our button
-      a.addClass("movie-btn");
+      // Adding a class of search-btn to our button
+      a.addClass("search-btn");
       // Adding a data-attribute
       a.attr("data-name", cityArray[i]);
       // Providing the initial button text
@@ -187,7 +187,7 @@ function renderButtons() {
     }
      // Adding a click event listener to all elements with a class of "movie-btn"
 
-     $(".movie-btn").click(function(){
+     $(".search-btn").click(function(){
         console.log($(this).attr("data-name"));
         oneday($(this).attr("data-name"));
         fiveday($(this).attr("data-name"));
@@ -208,8 +208,8 @@ renderButtons();
         //push city into the array (cityArray)
         //set cityArray to local storage (json.stringify)
         //render out the btns
-
-        $(".movie-btn").click(function(){
+//local storyage
+        $(".search-btn").click(function(){
             var userinput=$(this).siblings(".data-name").val();
             console.log(userinput)
            console.log($(this).attr("id"));
