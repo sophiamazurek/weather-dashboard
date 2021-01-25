@@ -146,11 +146,11 @@ function fiveday(city){
 
 }
 
- // This function handles events where a movie button is clicked
- $("#add-movie").on("click", function(event) {
+ // This function handles events where a search button is clicked
+ $("#add-city").on("click", function(event) {
     event.preventDefault();
     // This line grabs the input from the textbox
-    var movie = $("#movie-input").val().trim();
+    var movie = $("#city-input").val().trim();
 
     // Adding movie from the textbox to our array
     cityArray.push(movie);
