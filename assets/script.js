@@ -128,9 +128,9 @@ function fiveday(city){
              //<img src=>
              iconimg.attr("src", iconurl);
             var p6=$("<p>");
-            p6.text(obj.list[i*8].main.temp);
+            p6.text("Temperature: " + obj.list[i*8].main.temp);
             var p7=$("<p>");
-            p7.text(obj.list[i*8].main.humidity);
+            p7.text("Humidity: " + obj.list[i*8].main.humidity);
 
             p5.append(iconimg);
             div12.append(h22);
@@ -194,7 +194,7 @@ function renderButtons() {
       
       });
   }
-
+ 
    
 oneday("reno");
 fiveday("reno");
@@ -208,3 +208,14 @@ renderButtons();
         //push city into the array (cityArray)
         //set cityArray to local storage (json.stringify)
         //render out the btns
+
+        $(".movie-btn").click(function(){
+            var userinput=$(this).siblings(".data-name").val();
+            console.log(userinput)
+           console.log($(this).attr("id"));
+           // set hour to local storage
+           // ls hour = userinput
+           // userinput ="";
+           localStorage.setItem($(this).attr("id"), JSON.stringify(userinput));
+           
+         });
